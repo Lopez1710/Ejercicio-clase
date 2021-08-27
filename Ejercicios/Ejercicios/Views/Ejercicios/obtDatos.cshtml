@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "abtDatos";
+}
+
+<h2>Ingrese sus datos</h2>
+
+@using (Html.BeginForm("obtDatos", "Ejercicios"))
+{
+    <label for="nombre">Usuario</label>
+            <input name="nombre" id="nombew" type="text"  value=@ViewBag.nombre />
+            <br />
+            <label for="valorhri">valor de hora</label>
+            <input name="valorhr" id="valorhr" type="number"  value=@ViewBag.valorhoras />
+            <br />
+            <label for="hrstrab">horas trabajadas</label>
+            <input name="hrstrab" id="hrstrab" type="number" value=@ViewBag.horastrab />
+            <br /><label for="antiguedad">antiguedad</label>
+            <input name="antiguedad" id="antiguedad" type="number"  value=@ViewBag.antiguedad />
+            <br /><label for="totalcobrar">total a cobrar</label>
+            <input name="totalcobrar" id="totalcobrar" type="number"  readonly value=@ViewBag.cobro  />
+            <br /><label for="descuento">total del descuento</label>
+            <input name="descuento" id="descuento" type="number"  readonly value=@ViewBag.descuento />
+            <br />
+            <br /><label for="condescuento">total con descuento</label>
+            <input name="condescuento" id="condescuento" type="number"  readonly value=@ViewBag.condescuento />
+            <br />
+            <input type="submit" value="Ingresar" />
+}
+

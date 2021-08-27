@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+
+</head>
+<body>
+    <div> 
+        <h2<Login</h2>
+        @using (Html.BeginForm("Login", "Ejercicios", FormMethod.Post))
+        {
+            <label for="User">Usuario</label>
+            <input name="User" id="user" type="text" placeholder="Usuario"  />
+            <br/>
+            <label for="dui">DUI</label>
+            <input name="dui" id="dui" type="number" placeholder="DUI"  />
+            <br />
+            <label style="color = black" value=@ViewBag.Error></label>
+            <br />
+            <input type="submit" value="Ingresar" />
+        }
+    </div>
+</body>
+</html>
